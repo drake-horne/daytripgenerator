@@ -1,6 +1,7 @@
 import random
 from tkinter import N
 destinations = ['Paris','New York','Oahu','Los Angeles','Jamaica']
+paris_restaurants = ['linguinis','ratatouilles','Le Frenchie']
 restaurants = ['McDonalds','Chic-Fil-A','Steak house','Italian']
 mode_of_transportation = ['Rental Car','Train','Bus','Trolley']
 entertainments = ['Go on a City tour','Go to the bar','Go see local sports','Go to a Festival']
@@ -25,6 +26,12 @@ def destination_selector():
         destination_response = input(f'Your destination for this trip is now {destination}. Is that OK? y/n ')
         if destination_response == 'n':
             destinations.remove(destination)
+        # if destination is destinations[0]:
+        #     restaurants == paris_restaurants
+            
+            
+            
+
     print(y)
     return destination        
 
@@ -48,12 +55,19 @@ def restaurant_selector():
     #         restaurant_response = input(f'Do you want to eat at {restaurant}? y/n ')
     #     return restaurant
     #     print(y)
+    destination = saved_dest_choice
     restaurant_response = 'n'
-    while restaurant_response == 'n':
-        restaurant = random.choice(restaurants)
-        restaurant_response = input(f'Do you want to eat at {restaurant}? y/n ')
-        if restaurant_response == 'n':
-            restaurants.remove(restaurant)
+    while restaurant_response == 'n': 
+        if destination == 'Paris' and restaurant_response == 'n':
+            restaurant = random.choice(paris_restaurants)
+            restaurant_response = input(f'Do you want to eat at {restaurant}? y/n ')
+            if restaurant_response == 'n':
+                paris_restaurants.remove(restaurant) 
+        else:             
+            restaurant = random.choice(restaurants)
+            restaurant_response = input(f'Do you want to eat at {restaurant}? y/n ') 
+            if restaurant_response == 'n':
+                restaurants.remove(restaurant)   
     print(y)
     return restaurant
 
