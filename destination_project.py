@@ -4,7 +4,7 @@ destinations = ['Paris','New York','Oahu','Los Angeles','Jamaica']
 restaurants = ['McDonalds','Chic-Fil-A','Steak house','Italian']
 mode_of_transportation = ['Rental Car','Train','Bus','Trolley']
 entertainments = ['Go on a City tour','Go to the bar','Go see local sports','Go to a Festival']
-y = 'Ok great, lets move on'
+y = 'Ok great, lets move on to the next step.'
 def destination_selector():
     # destination = random.choice(destinations)
     # destination_response = input(f'Your destination for this trip is {destination}. Is that OK? y/n ')
