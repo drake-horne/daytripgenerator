@@ -26,11 +26,6 @@ def destination_selector():
         destination_response = input(f'Your destination for this trip is now {destination}. Is that OK? y/n ')
         if destination_response == 'n':
             destinations.remove(destination)
-        # if destination is destinations[0]:
-        #     restaurants == paris_restaurants
-            
-            
-            
 
     print(y)
     return destination        
